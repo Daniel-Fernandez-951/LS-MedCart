@@ -1,0 +1,36 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} UI Tables {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header">
+        <h3 class="card-title"> Top 5 Results</h3>
+          <div class="alert alert-warning">
+          <button type="button" aria-hidden="true" class="close" data-dismiss="alert" aria-label="Close">
+            <i class="tim-icons icon-simple-remove"></i>
+          </button>
+          <span><b> Caution - </b> Dosage recommendations vary by user.</span>
+        </div>
+{#          <h6 class="card-category text-gray">DISCLAIMER! Dosage Size recommendations will vary between users.</h6>#}
+      </div>
+      <div class="card-body">
+        <div class="table-responsive">
+            {{ table_html|safe}}
+        </div>
+          <a href="/predict" class="btn btn-primary btn-round">Make Another...</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}

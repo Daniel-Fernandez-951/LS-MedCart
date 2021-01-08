@@ -1,0 +1,34 @@
+{% extends "layouts/base.html" %}
+
+{% block title %}  {% endblock %}
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="card card-profile">
+            <div class="card-body m-md-auto mx-auto my-auto">
+                <h4 class="card-header mb-2">Desired Properties</h4>
+                <body>
+                    <div class="form-group">
+                          What are you looking for?
+                          <form action="/api/model" method="post">
+                              <textarea type="text" name="input_a" id="input_A" value="" placeholder="Active and alert with a sweet and earthy flavor"></textarea>
+                              <div></div>
+                              <button type="submit" name="submit" class='btn btn-fill btn-primary'>Recommend</button>
+                          </form>
+                    </div>
+                </body>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}
