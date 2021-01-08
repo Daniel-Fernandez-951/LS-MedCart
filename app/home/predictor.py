@@ -3,6 +3,7 @@ import pickle
 from joblib import load
 # from collections import OrderedDict
 from json2html import *
+import sklearn
 
 
 # Update file path to app specific path
