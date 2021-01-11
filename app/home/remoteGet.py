@@ -21,14 +21,16 @@ def get_studies():
 def get_brands():
     pack_dat = {}
     x = 0
-    resp = requests.get('https://api.otreeba.com/v1/brands?page=1&count=16').json()
+    resp = requests.get('https://api.otreeba.com/v1/brands?page=2W&count=1').json()
     for x in resp['data']:
         study = OrderedDict({
             "Name": x['name'],
-            # "Brand": x['brand']['name'],
+            "Brand": x,
             # "Key Findings": x['keyFindings']
         })
-        pack_dat.update(study)
+        pack_dat.update(**study)
+        return pack_dat
+        #
     # html_dat = json2html.convert(json=pack_dat, table_attributes="class=\"table tablesorter\"")
     # return html_dat
     return pack_dat
